@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Nunito:wght@400;600;700;800&display=swap");
+:root {
+  --font-primary: "montserrat", "sans-serif";
+  --font-secondary: "nunito", sans-serif;
+  --font-color: #fff;
+  --bgcolor: #020c1a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  background: var(--bgcolor);
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  color: var(--font-color);
+}
+
+.hero {
+  height: 100vh;
+  background-image: url("./assets/Hero-bg.svg");
+  background-size: 60%;
+  background-position-x: 50vw;
+  background-repeat: no-repeat;
+  color: var(--font-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.hero h1 {
+  font-size: 3.4375rem;
+  font-weight: 900;
+  font-family: var(--font-primary);
+  margin-top: 12px;
+}
+.hero h2,
+h3,
+h4 {
+  font-size: 1.625rem;
+  font-weight: 800;
+  font-family: var(--font-primary);
+}
+.hero h3 {
+  font-size: 1.875rem;
+}
+.hero h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.cards-wrap {
+  margin-top: -30px;
+}
+.card-primary {
+  padding: 1.2rem;
+  padding: 32px 15px 40px;
+  background: linear-gradient(
+    168.53deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(64, 30, 64, 0.2) 97.46%
+  );
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  margin: 1rem 2.5vw;
+  transition: all ease-in 230ms;
+  max-width: 340px;
+}
+.card-primary:hover {
+  transform: translateY(-30px);
+  transition: all ease-in 230ms;
+}
+.card-primary p {
+  font-size: 1.375rem;
+  font-weight: 600;
+  font-family: var(--font-secondary);
+  padding: 33px 0px 45px;
+}
+.cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a:any-link {
+  text-decoration: none;
+  color: var(--font-color);
+  font-weight: 700;
+  font-size: 1.4rem;
+  font-style: var(--font-primary);
+}
+
+/* -------------------------------- */
+
+.question-body {
+  max-width: 100%;
+  height: 100vh;
+  background-image: url("./assets/Quiz-bg.svg");
+  background-image: url("./assets/Quiz-bg.svg");
+  background-repeat: no-repeat;
+  background-position: 1px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ques-structure {
+  max-width: 55vw;
+  padding: 1rem;
+  padding-top: 200px;
+  display: flex;
+  flex-direction: column;
+}
+.question {
+  align-self: center;
+  justify-self: center;
+}
+
+.question h1 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  color: var(--font-color);
+  font-size: 45px;
+}
+
+.option {
+  cursor: pointer;
+  width: 290px;
+  height: 45px;
+  color: var(--font-color);
+  margin: 1.2rem 1rem;
+  padding: 0.4rem 1rem;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  border: 1px solid #fff;
+  transition: all ease-in 230ms;
+}
+
+.option-text {
+  font-family: var(--font-secondary);
+  font-size: 22.5px;
+  font-weight: 600;
+  color: var(--font-color);
+  padding: 0.25rem;
+}
+.option:hover {
+  transition: all ease-in 230ms;
+
+  transform: translateX(15px);
+}
+.order {
+  border: 2px solid rgba(250, 250, 250, 0.541);
+  border-radius: 3px;
+  color: rgba(250, 250, 250, 0.941);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  font-family: var(--font-secondary);
+  margin-right: 10px;
+}
+
+.selected .order {
+  background: white;
+  color: #0f0f0f;
+  font-size: 1.45rem;
+  transition: all ease-in 230ms;
+}
+.score {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  border: 1.5px solid #fff;
+  position: fixed;
+  width: 250px;
+  height: 150px;
+  top: 80px;
+  left: 60px;
+}
+
+.score h2 {
+  margin: 0;
+  font-size: 1.875rem;
+  font-weight: 700;
+  font-family: var(--font-secondary);
+}
+
+.correct-answer {
+  background: rgba(67, 255, 63, 0.562);
+  backdrop-filter: blur(12px);
+}
+.incorrect-answer {
+  background: red;
+}
+
+.result-wrap img {
+  max-width: 303px;
+}
+.result-wrap {
+  padding: 4.5rem 0;
+  width: 546px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: var(--font-color);
+  background: linear-gradient(
+    168.53deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(64, 30, 64, 0.2) 97.46%
+  );
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border-radius: 10px;
+}
+.result-wrap h1,
+h2 {
+  margin: 1.2rem 0;
+  font-size: 3.125rem;
+  font-family: var(--font-primary);
+  font-weight: 800;
+}
+.result-wrap h2 {
+  margin: 0.2rem 0;
+  font-size: 2.5rem;
+}
+
+.review-body {
+  background-image: url("./assets/Quiz-bg.svg");
+  background-image: url("./assets/Quiz-bg.svg");
+  background-repeat: no-repeat;
+  background-position: 1px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.review-structure {
+  max-width: 55vw;
+  padding: 1rem;
+  padding-top: 150px;
+  display: flex;
+  flex-direction: column;
+}
+/* -----------------mobile styling----------------- */
+@media (max-width: 768px) {
+  *:hover {
+    transform: none;
+  }
+  .hero {
+    padding-top: 100px;
+    height: inherit;
+  }
+  .hero h1 {
+    font-size: 1.875rem;
+    margin: 1rem;
+    /* font-weight: 00; */
+    margin-bottom: 2rem;
+  }
+  .hero h2 {
+    font-size: 1rem;
+    margin: 1rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+  }
+  .logo {
+    display: none;
+  }
+  .list-tag li {
+    padding: 1rem 2rem;
+  }
+  nav {
+    padding: 0;
+  }
+  .ques-structure {
+    max-width: inherit;
+    padding-top: 0;
+  }
+  .question h1 {
+    font-size: 1.875rem;
+  }
+  .score {
+    top: 80px;
+    left: auto;
+  }
+  .option:hover {
+    transform: none;
+  }
+
+  .result-wrap {
+    max-width: 375px;
+  }
+  .result-wrap h1 {
+    font-size: 1.875rem;
+  }
+  .result-wrap h2 {
+    font-size: 1.575rem;
+  }
+  .review-structure {
+    max-width: inherit;
+  }
+}
+@media (max-width: 1400px) {
+  .card-primary {
+    margin: 1rem 1.5vw;
+  }
+}
