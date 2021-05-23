@@ -269,7 +269,6 @@ h2 {
   .hero h1 {
     font-size: 1.875rem;
     margin: 1rem;
-    /* font-weight: 00; */
     margin-bottom: 2rem;
   }
   .hero h2 {
@@ -281,8 +280,11 @@ h2 {
   .logo {
     display: none;
   }
+  nav{
+    justify-content:space-evenly
+  }
   .list-tag li {
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
   }
   nav {
     padding: 0;
@@ -295,8 +297,7 @@ h2 {
     font-size: 1.875rem;
   }
   .score {
-    top: 80px;
-    left: auto;
+    display:none;
   }
   .option:hover {
     transform: none;
